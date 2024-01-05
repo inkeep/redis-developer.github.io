@@ -1,0 +1,7 @@
+.ikp-floating-button {
+  background: #161F31;
+}
+
+[data-theme='dark'] .ikp-floating-button {
+  background: #2f3337;
+}

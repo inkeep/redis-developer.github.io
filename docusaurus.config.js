@@ -184,6 +184,7 @@ module.exports = {
       }
     },
   },
+  themes: ["@inkeep/docusaurus/chatButton"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -298,14 +299,56 @@ module.exports = {
         // Useful if you want to support a single color mode
         disableSwitch: false,
       },
-        announcementBar: {
-          id: 'redis-7-2-release', // Any value that will identify this message.
-          content:
-            '<div class="announcement-bar"><a href="https://redis.com/blog/introducing-redis-7-2/" target="_blank" rel="noopener"><span>Announcing Redis 7.2 and Enhanced Vector DB</span> <span style="margin-left:1rem">Learn more</span> <span style="margin-left:0.25rem">→</span></a></div>',
-          backgroundColor: 'rgb(210, 215, 254)', // Defaults to `#fff`.
-          textColor: 'rgb(22 31 49)', // Defaults to `#000`.
-          isCloseable: true, // Defaults to `true`.
+      announcementBar: {
+        id: 'redis-7-2-release', // Any value that will identify this message.
+        content:
+          '<div class="announcement-bar"><a href="https://redis.com/blog/introducing-redis-7-2/" target="_blank" rel="noopener"><span>Announcing Redis 7.2 and Enhanced Vector DB</span> <span style="margin-left:1rem">Learn more</span> <span style="margin-left:0.25rem">→</span></a></div>',
+        backgroundColor: 'rgb(210, 215, 254)', // Defaults to `#fff`.
+        textColor: 'rgb(22 31 49)', // Defaults to `#000`.
+        isCloseable: true, // Defaults to `true`.
+      },
+      inkeepConfig: {
+        stylesheetUrls: ['/css/inkeep-overrides.css'],
+        baseSettings: {
+          apiKey: "50ff1d0d4aee5d0c126f1b93783e5e7cbfb3ef78b02668fe",
+          integrationId: "clphge5p80000s601798rdk5u",
+          organizationId: "org_X8EzgCzOiGEfmtXf",
+          primaryBrandColor: "#DC382C",
+          organizationDisplayName: "Redis",
+          theme: {
+            tokens: {
+              fonts: {
+                heading: "var(--ifm-font-family-base)",
+                body: "var(--ifm-font-family-base)",
+              },
+            },
+          }
         },
+        modalSettings: {
+        },
+        searchSettings: {
+        },
+        aiChatSettings: {
+          botAvatarSrcUrl: "/img/redis-logo.png",
+          quickQuestions: [
+            'How to implement an IP based rate limiter?',
+            'In python, how to write lua scripts?',
+            'How to setup client side caching?',
+          ],
+          getHelpCallToActions: [
+            {
+              icon: { builtIn: 'FaDiscord' },
+              name: 'Discord Community',
+              url: 'https://discord.gg/redis',
+            },
+            {
+              icon: { builtIn: 'IoHelpBuoyOutline' },
+              name: 'Get help (Enterprise)',
+              url: 'https://app.redislabs.com/#/login?return_to=https%3A%2F%2Fsupport.redis.com%2Fhc%2Fen-us',
+            },
+          ],
+        },
+      }
     }),
   presets: [
     [
